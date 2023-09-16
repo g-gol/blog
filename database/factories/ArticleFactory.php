@@ -20,7 +20,6 @@ class ArticleFactory extends Factory
     {
         return [
             'user_id' => User::query()->inRandomOrder()->value('id'),
-            'category_id' => Category::query()->inRandomOrder()->value('id'),
             'title' => ucfirst(fake()->words(3, true)),
             'body' => fake()->text(1000)
         ];
