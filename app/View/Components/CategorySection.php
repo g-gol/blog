@@ -23,7 +23,7 @@ class CategorySection extends Component
     public function render(): View|Closure|string
     {
         return view('components.category-section', [
-            'categories' => Category::all()
+            'categories' => Category::select(['name'])->get()
         ]);
     }
 }

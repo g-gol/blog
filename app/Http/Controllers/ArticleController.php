@@ -13,7 +13,7 @@ class ArticleController extends Controller
 {
     public function index(): View|Application|Factory
     {
-        $articles = Article::query()->select('id', 'thumbnail', 'title')->latest()->with('categories')->paginate(6);
+        $articles = Article::query()->select('id', 'thumbnail', 'title')->latest()->with('categories:name')->paginate(6);
 
         return view('articles.index', [
             'articles' => $articles
