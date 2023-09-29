@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('thumbnail')->nullable();
             $table->string('title');
             $table->text('body');
+            $table->text('slug');
             $table->timestamps();
         });
     }
